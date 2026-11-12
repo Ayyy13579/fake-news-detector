@@ -53,7 +53,7 @@ for pkg in ["stopwords", "wordnet", "omw-1.4",
 
 STOP_WORDS  = set(stopwords.words("english"))
 LEMMATIZER  = WordNetLemmatizer()
-OUT_DIR     = "/mnt/user-data/outputs"
+OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "outputs")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 
