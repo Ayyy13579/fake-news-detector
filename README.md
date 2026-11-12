@@ -1,4 +1,4 @@
-# 📰 Fake News Detector
+# Fake News Detector
 
 A machine-learning pipeline that classifies news headlines and articles as **Fake** or **Real**, with an interactive command-line tool for single, batch, and multi-model predictions.
 
@@ -6,7 +6,7 @@ Built with Python, NLTK, and scikit-learn.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Full NLP preprocessing**: lowercasing, URL/number/punctuation removal, tokenisation, stop-word removal, and POS-aware lemmatisation
 - **Hybrid TF-IDF features**: word n-grams (1–2) capture *vocabulary*; character n-grams (3–5) capture *writing style*; the two are stacked into one feature matrix
@@ -16,7 +16,7 @@ Built with Python, NLTK, and scikit-learn.
 
 ---
 
-## 🧠 How it works
+## How it works
 
 ```
 Raw text
@@ -26,11 +26,7 @@ Raw text
   → Evaluation + plots → best model saved with joblib
 ```
 
-**Why two kinds of n-grams?** Fake news often differs from real news in *how* it is written (sensational phrasing, odd word endings) as much as *what* it says. Character n-grams pick up the style; word n-grams pick up the topic and vocabulary.
-
----
-
-## 📁 Project structure
+## Project structure
 
 ```
 fake-news-detector/
@@ -45,7 +41,7 @@ fake-news-detector/
 
 ---
 
-## 🚀 Getting started
+## Getting started
 
 ```bash
 # 1. Clone
@@ -70,7 +66,7 @@ NLTK data (stopwords, WordNet, tokenizer, POS tagger) is downloaded automaticall
 
 ---
 
-## 🖥️ CLI usage
+## CLI usage
 
 ```
 ══════════════════════════════════════════════════
@@ -101,7 +97,7 @@ NLTK data (stopwords, WordNet, tokenizer, POS tagger) is downloaded automaticall
 
 ---
 
-## 📊 Results
+## Results
 
 > Replace this table with your own numbers after running `fakenews_train.py`.
 
@@ -119,7 +115,7 @@ Training also produces `outputs/fakenews_analysis.png` with a model comparison c
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 The scripts expect a CSV with two columns:
 
@@ -132,7 +128,7 @@ Describe your data source here (name, size, class balance, link). If the dataset
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - The model learns patterns in its **training data**; it does not fact-check claims. A well-written false statement can be classified as Real.
 - Performance depends heavily on the dataset and may not generalise to other news sources, topics, or time periods.
@@ -140,7 +136,7 @@ Describe your data source here (name, size, class balance, link). If the dataset
 
 ---
 
-## 🔮 Future improvements
+## Future improvements
 
 - Try transformer models (e.g. DistilBERT) and compare against the TF-IDF baseline
 - Add cross-validation and hyperparameter tuning
@@ -149,7 +145,7 @@ Describe your data source here (name, size, class balance, link). If the dataset
 
 ---
 
-## 🛠️ Tech stack
+## Tech stack
 
 Python · pandas · NumPy · scikit-learn · NLTK · SciPy · matplotlib · seaborn · joblib
 
