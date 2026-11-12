@@ -21,7 +21,7 @@ from fakenews_train import preprocess
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 BASE_DIR  = os.path.dirname(os.path.abspath(__file__))
-OUT_DIR   = "/mnt/user-data/outputs"
+ OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "outputs")
 
 MODEL_PATH    = os.path.join(BASE_DIR, "fakenews_model.pkl")
 WORD_VEC_PATH = os.path.join(BASE_DIR, "fakenews_word_vec.pkl")
